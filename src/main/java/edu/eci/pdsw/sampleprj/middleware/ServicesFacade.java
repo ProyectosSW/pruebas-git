@@ -19,6 +19,8 @@ package edu.eci.pdsw.sampleprj.middleware;
 import edu.eci.pdsw.stubs.servicesfacadestub.PersistenceFacade;
 import edu.eci.pdsw.stubs.servicesfacadestub.Producto;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -49,7 +51,7 @@ public class ServicesFacade {
     public int calcularCostoLista(List<Producto> lp) throws ServicesException{
         
         int total=0;
-        
+        LOG.info("Ejecutando metodo calcularCostoLista");
         for (Producto p:lp){
             if (pf.getProductoPorID(p.getId())==null){
                 throw new ServicesException("Se intenta calcular el costo"
@@ -60,8 +62,10 @@ public class ServicesFacade {
                   total+=p.getPrecioEnPesos();
         }
         
+        
         return total;
     }
+    private static final Logger LOG = Logger.getLogger(ServicesFacade.class.getName());
     
     
     /**
