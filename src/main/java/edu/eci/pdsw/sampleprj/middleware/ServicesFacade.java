@@ -69,8 +69,7 @@ public class ServicesFacade {
      * dado
      */
     public Producto consultarProducto(int id){
-        
-        return null;
+        return pf.getProductoPorID(id);
     }
     
 }
