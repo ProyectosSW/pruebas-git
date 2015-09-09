@@ -60,16 +60,18 @@ public class ServicesFacade {
                   total+=p.getPrecioEnPesos();
         }
         
+            
+        }
         return total;
     }
     
-    
-    /**
+        /**
+     *
+     * @param
      * @obj consultar un producto a partir de su identificador.
      * @param id
-     * @return el producto, o null si no hay un producto con el identificador
-     * dado
-     */
+     * @return el producto, o null si no hay un producto con el identificador dado
+     **/
     public Producto consultarProducto(int id){
         return pf.getProductoPorID(id);
     }
