@@ -20,6 +20,7 @@ import edu.eci.pdsw.sampleprj.middleware.ServicesException;
 import edu.eci.pdsw.sampleprj.middleware.ServicesFacade;
 import edu.eci.pdsw.stubs.servicesfacadestub.Producto;
 import java.util.Arrays;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.Before;
 import org.junit.Test;
@@ -82,6 +83,23 @@ public class servicesFacadeTest {
         
         
     }
+    
+    @Test
+    public void testConsultarProducto()  {
+        Producto p1=new Producto(2222,"p1",100);
+        
+        ServicesFacade servicio = new ServicesFacade();
+        try {
+            servicio.registrarProducto(p1);
+        } catch (ServicesException ex) {
+            //Logger.getLogger(servicesFacadeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Producto prod = servicio.consultarProducto(2222);
+        assertEquals(prod.getId(), 2222);
+        assertEquals(prod.getNombre(), "pl");
+        assertEquals(prod.getPrecioEnPesos(), 100);
+    }
 
     
 }
+
