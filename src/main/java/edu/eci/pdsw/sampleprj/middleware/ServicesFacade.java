@@ -60,14 +60,9 @@ public class ServicesFacade {
             }
             else {
                   total+=p.getPrecioEnPesos();
+            }
         }
-        
-<<<<<<< HEAD
-            
-        }
-=======
-        
->>>>>>> 0ed4cc4653a50a3eabd53103f6fc91713c1a55ad
+
         return total;
     }
     private static final Logger LOG = Logger.getLogger(ServicesFacade.class.getName());
