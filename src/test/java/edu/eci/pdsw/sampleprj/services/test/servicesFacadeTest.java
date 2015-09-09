@@ -20,7 +20,6 @@ import edu.eci.pdsw.sampleprj.middleware.ServicesException;
 import edu.eci.pdsw.sampleprj.middleware.ServicesFacade;
 import edu.eci.pdsw.stubs.servicesfacadestub.Producto;
 import java.util.Arrays;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.junit.Before;
 import org.junit.Test;
