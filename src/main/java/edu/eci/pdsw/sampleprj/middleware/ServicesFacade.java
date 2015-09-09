@@ -56,6 +56,8 @@ public class ServicesFacade {
                         + "de una lista de compras que tiene al menos"
                         + "un producto no registrado.");
             }
+            else {
+                  total+=p.getPrecioEnPesos();
         }
         
         return total;
